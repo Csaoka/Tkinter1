@@ -1,0 +1,28 @@
+from tkinter import *
+def terfogat():
+    r = int(elsomezo.get())
+    m = int(masodik.get())
+    c = 3.14*r*r*m
+    negyedik.delete(0, END)
+    negyedik.insert(0, ''+str(c)+'cm2')
+foablak = Tk()
+gyoker='H:\Projektfeladat\\'
+elso=Label(foablak, text='Hány liter?', )
+elso.grid()
+elsomezo=Entry(foablak)
+elsomezo.grid()
+masodikmezo=Label(foablak, text='Milyen hosszú a sugara? (cm)')
+masodikmezo.grid()
+masodik=Entry(foablak)
+masodik.grid()
+harmadikmezo=Label(foablak, text='Milyen magas a hordó? (cm)')
+harmadikmezo.grid()
+harmadik=Entry(foablak)
+harmadik.grid()
+gomb=Button(foablak, text='Kiszámít', command=terfogat)
+gomb.grid()
+eredmeny=Label(foablak, text='Térfogat: ')
+eredmeny.grid()
+negyedik=Entry(foablak)
+negyedik.grid()
+foablak.mainloop()
